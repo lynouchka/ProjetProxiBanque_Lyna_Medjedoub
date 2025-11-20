@@ -24,7 +24,7 @@ public class ClientController {
         return clientService.findById(id);
     }
 
-    @PostMapping("coffees/update")
+    @PostMapping("/update")
     public Client createClient(@RequestBody Client client) {
         return clientService.create(client);
     }
