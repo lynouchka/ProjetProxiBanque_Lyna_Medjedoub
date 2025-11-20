@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,7 +8,12 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Compte {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Getter
     @Setter
@@ -16,6 +22,11 @@ public class Compte {
     protected LocalDate date;
 
     //private List<Client> client = new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "client_id")
+    @Getter @Setter
+    private Client client;
 
     public Compte() {}
 
@@ -32,7 +43,7 @@ public class Compte {
     }
 
     public void retirer (double argent) {
-        if (argent < 0) {
+        if (argent > 0) {
             solde -= argent;
         }
     }

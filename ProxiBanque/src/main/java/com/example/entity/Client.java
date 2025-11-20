@@ -1,12 +1,18 @@
 package com.example.entity;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Client {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Getter
     @Setter
@@ -33,9 +39,16 @@ public class Client {
     private String telephone;
 
     @Getter
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private List<Compte> comptes = new ArrayList<>();
+
     @Getter
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private List<Carte> cartes = new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "conseiller_id")
+    private Conseiller conseiller;
 
     public Client() {};
 

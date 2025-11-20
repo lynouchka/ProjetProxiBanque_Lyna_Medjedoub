@@ -1,12 +1,19 @@
 package com.example.entity;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Gerant {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @Getter
     @Setter
     private String nom;
@@ -16,6 +23,7 @@ public class Gerant {
     private String prenom;
 
     @Getter
+    @OneToMany(mappedBy = "gerant", cascade = CascadeType.ALL)
     private List<Conseiller> conseillers =  new ArrayList<Conseiller>();
 
     public Gerant () {}
@@ -27,6 +35,7 @@ public class Gerant {
 
     public void addCons(Conseiller conseiller) {
         conseillers.add(conseiller);
+        //conseiller.setGerant(this);
     }
 
 }
