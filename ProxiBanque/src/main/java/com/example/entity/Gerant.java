@@ -25,7 +25,7 @@ public class Gerant {
         this.prenom = prenom;
     }
 
-    public void addConseiller(Conseiller conseiller) {
+    public void addCons(Conseiller conseiller) {
         conseillers.add(conseiller);
     }
 
