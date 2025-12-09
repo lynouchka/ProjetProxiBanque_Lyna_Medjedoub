@@ -1,6 +1,6 @@
-package com.example.repository;
+package com.repository;
 
-import com.example.entity.Carte;
+import com.entity.Carte;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CarteRepository extends JpaRepository<Carte, Long> {}

@@ -1,6 +1,6 @@
-package com.example.repository;
+package com.repository;
 
-import com.example.entity.Conseiller;
+import com.entity.Conseiller;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ConseillerRepository extends JpaRepository<Conseiller,Long> {

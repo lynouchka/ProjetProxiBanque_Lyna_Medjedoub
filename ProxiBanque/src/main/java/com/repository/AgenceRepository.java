@@ -1,7 +1,6 @@
-package com.example.repository;
+package com.repository;
 
-import com.example.entity.Agence;
-import com.example.entity.Carte;
+import com.entity.Agence;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AgenceRepository extends JpaRepository<Agence,Long> {

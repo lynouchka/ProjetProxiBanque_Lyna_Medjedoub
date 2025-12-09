@@ -1,6 +1,6 @@
-package com.example.repository;
+package com.repository;
 
-import com.example.entity.Compte;
+import com.entity.Compte;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CompteRepository extends JpaRepository<Compte,Long> {

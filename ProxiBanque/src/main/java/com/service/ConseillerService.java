@@ -1,8 +1,8 @@
-package com.example.service;
+package com.service;
 
-import com.example.entity.Client;
-import com.example.entity.Conseiller;
-import com.example.repository.ConseillerRepository;
+import com.entity.Client;
+import com.entity.Conseiller;
+import com.repository.ConseillerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,10 +1,9 @@
-package com.example.controller;
+package com.controller;
 
-import com.example.entity.Agence;
-import com.example.entity.Conseiller;
-import com.example.entity.Gerant;
-import com.example.service.AgenceService;
-import com.example.service.ConseillerService;
+import com.entity.Agence;
+import com.entity.Conseiller;
+import com.entity.Gerant;
+import com.service.AgenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

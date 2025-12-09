@@ -1,8 +1,8 @@
-package com.example.controller;
+package com.controller;
 
-import com.example.entity.Client;
-import com.example.entity.Conseiller;
-import com.example.service.ConseillerService;
+import com.entity.Client;
+import com.entity.Conseiller;
+import com.service.ConseillerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

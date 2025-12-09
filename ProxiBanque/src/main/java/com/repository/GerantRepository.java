@@ -1,6 +1,6 @@
-package com.example.repository;
+package com.repository;
 
-import com.example.entity.Gerant;
+import com.entity.Gerant;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface GerantRepository extends JpaRepository<Gerant,Long> {
